@@ -8,7 +8,7 @@ This project uses Webdriver.IO framerwork. Other requierements for running this 
 1. One of Code editors (Visual Studio Code, ATOM, Kate, CudaText or other)
 2. Cucumber-framework 
 
-
+You can acsess this website with this URL: https://www.saucedemo.com/ 
 Tests are run with the command: npx wdio run ./wdio.conf.js 
 
 Tests that are executed: 
