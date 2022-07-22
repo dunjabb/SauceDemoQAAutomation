@@ -12,6 +12,4 @@ You can access this website with this URL: https://www.saucedemo.com/
 Tests are run with the command: npx wdio run ./wdio.conf.js 
 
 Tests that are executed: 
-1. Test for Login page
-
-da li sam uspela da ga preimenujem? 
+1. Test for Login page 
