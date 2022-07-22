@@ -1,4 +1,4 @@
-# SauceDemoSwagLabsQAAutomation 
+# SauceDemoQAAutomation 
 
 Saucedemo Swag Labs is a website that is used to practice automated testing. 
 
