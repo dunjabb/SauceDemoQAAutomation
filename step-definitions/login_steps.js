@@ -6,7 +6,7 @@ Given(/^The user is on the Login page of Saucedemo$/, () => {
 });
 
 When(/^The user types his username and password$/, () => {
-	LoginPage.inputUsernameAndPassword("standard_user", "secret_sauce")
+	LoginPage.inputUsernameAndPassword("standard_user", "mama_mia")
 });
 
 When(/^The user clicks on the login button$/, () => {

@@ -1,7 +1,7 @@
 
 const Page = require('./basePage');
-
 class LoginPage extends Page {
+
     /**
      * define selectors using getter methods
      */
@@ -24,7 +24,6 @@ class LoginPage extends Page {
     inputUsernameAndPassword(username, password) {
         this.inputUsername.setValue(username);
         this.inputPassword.setValue(password);
-
     }
 
     clickLoginButton() {
