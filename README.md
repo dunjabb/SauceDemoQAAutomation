@@ -9,6 +9,7 @@ This project uses Webdriver.IO framerwork. Other requierements for running this 
 2. Cucumber-framework 
 
 You can access this website with this URL: https://www.saucedemo.com/ 
+
 Tests are run with the command: npx wdio run ./wdio.conf.js 
 
 Tests that are executed: 
