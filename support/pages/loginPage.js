@@ -1,6 +1,6 @@
 
 const Page = require('./basePage');
-const assert = require('assert'); 
+const assert = require('assert');
 
 class LoginPage extends Page {
 
@@ -20,9 +20,9 @@ class LoginPage extends Page {
     }
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+        * a method to encapsule automation code to interact with the page
+        * e.g. to login using username and password
+        */
     inputUsernameAndPassword(username, password) {
         this.inputUsername.setValue(username);
         this.inputPassword.setValue(password);
