@@ -1,5 +1,7 @@
 
 const Page = require('./basePage');
+const assert = require('assert'); 
+
 class LoginPage extends Page {
 
     /**
