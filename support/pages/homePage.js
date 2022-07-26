@@ -12,14 +12,19 @@ class HomePage extends Page {
         return $('//span[@class="title"]');
     }
 
-    get btnSubmit() {
-        return $('//div[@class="bm-burger-button"]')
+    get addToCart() {
+        return $('//button[@class="btn btn_primary btn_small btn_inventory"]');
     }
-
+    
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
     }
+
+    clickAddToCartButton() {
+        this.addToCart.click()
+    }
+
 }
 
 module.exports = new HomePage();
