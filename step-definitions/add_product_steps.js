@@ -10,5 +10,5 @@ When(/^The user click on Add to cart button on one of the products$/, () => {
 });
 
 Then(/^The the product will be stored to shopping cart$/, () => {
-	browser.pause(10000);
+	browser.pause(5000);
 });
