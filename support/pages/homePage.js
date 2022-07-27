@@ -24,6 +24,14 @@ class HomePage extends Page {
         return $('//a[@id="about_sidebar_link"]')
     }
 
+    get productSorter() {
+        return $('//select[@class="product_sort_container"]')
+    }
+
+    get optionOne() {
+        return $('//option[@value="az"] ')
+    }
+    
     get allItems() {
         return $('//a[@id="inventory_sidebar_link"]')
     }
@@ -44,6 +52,15 @@ class HomePage extends Page {
     clickAboutCard() {
         this.aboutCard.click()
     }
+
+    clickProductSorterButton() {
+        this.productSorter.click()
+    }
+
+    clickOptionOneAZ() {
+        this.optionOne.click()
+    }
+    
     clickAllItemsButton() {
         this.allItems.click()
     }
