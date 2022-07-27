@@ -27,7 +27,7 @@ class HomePage extends Page {
     get optionOne() {
         return $('//option[@value="az"] ')
     }
-     
+    
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
