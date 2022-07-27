@@ -23,6 +23,10 @@ class HomePage extends Page {
     get aboutCard() {
         return $('//a[@id="about_sidebar_link"]')
     }
+
+    get allItems() {
+        return $('//a[@id="inventory_sidebar_link"]')
+    }
      
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
@@ -39,6 +43,9 @@ class HomePage extends Page {
 
     clickAboutCard() {
         this.aboutCard.click()
+    }
+    clickAllItemsButton() {
+        this.allItems.click()
     }
 }
 
