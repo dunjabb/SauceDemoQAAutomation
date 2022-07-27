@@ -19,6 +19,14 @@ class HomePage extends Page {
     get aboutCard() {
         return $('//a[@id="about_sidebar_link"]')
     }
+
+    get productSorter() {
+        return $('//select[@class="product_sort_container"]')
+    }
+
+    get optionOne() {
+        return $('//option[@value="az"] ')
+    }
      
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
@@ -31,6 +39,14 @@ class HomePage extends Page {
 
     clickAboutCard() {
         this.aboutCard.click()
+    }
+
+    clickProductSorterButton() {
+        this.productSorter.click()
+    }
+
+    clickOptionOneAZ() {
+        this.optionOne.click()
     }
 }
 
