@@ -14,3 +14,6 @@ Tests are run with the command: npx wdio run ./wdio.conf.js
 
 Tests that are executed: 
 1. Test for Login page 
+2. About card test
+3. Add products to cart test 
+4. All items card test
