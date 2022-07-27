@@ -12,6 +12,10 @@ class HomePage extends Page {
         return $('//span[@class="title"]');
     }
 
+    get addToCart() {
+        return $('//button[@class="btn btn_primary btn_small btn_inventory"]');
+    }
+    
     get burgerMenu() {
         return $('//button[@id="react-burger-menu-btn"]');
     }
@@ -27,10 +31,18 @@ class HomePage extends Page {
     get optionOne() {
         return $('//option[@value="az"] ')
     }
+    
+    get allItems() {
+        return $('//a[@id="inventory_sidebar_link"]')
+    }
      
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
+    }
+
+    clickAddToCartButton() {
+        this.addToCart.click()
     }
 
     clickBurgerMenuButton() {
@@ -47,6 +59,10 @@ class HomePage extends Page {
 
     clickOptionOneAZ() {
         this.optionOne.click()
+    }
+    
+    clickAllItemsButton() {
+        this.allItems.click()
     }
 }
 
