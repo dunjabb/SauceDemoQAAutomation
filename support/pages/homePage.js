@@ -25,7 +25,11 @@ class HomePage extends Page {
     }
 
     get optionOne() {
-        return $('//option[@value="az"] ')
+        return $('//option[@value="az"]')
+    }
+
+    get logout() {
+        return $('//a[@id="logout_sidebar_link"]')
     }
     
     checkIfUserIsLogedIn() {
@@ -47,6 +51,10 @@ class HomePage extends Page {
 
     clickOptionOneAZ() {
         this.optionOne.click()
+    }
+
+    clickLogoutButton() {
+        this.logout.click()
     }
 }
 
