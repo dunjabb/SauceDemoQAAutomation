@@ -7,18 +7,14 @@ Given(/^The user is on the Login page of Saucedemo$/, () => {
 });
 
 When(/^The user types his username and password$/, () => {
-	LoginPage.inputUsernameAndPassword("standard_user", "secret_sauce")
+	LoginPage.inputUsernameAndPassword("standard_user", "secret_sauce");
 });
 
 When(/^The user clicks on the login button$/, () => {
-	LoginPage.clickLoginButton()
+	LoginPage.clickLoginButton();
 });
 
 Then(/^The user will be directed to the Homepage of Saucedemo Swag Labs$/, () => {
 	browser.pause(1000) 
-	HomePage.checkIfUserIsLogedIn()
+	HomePage.checkIfUserIsLogedIn();
 });
-
-
-
-

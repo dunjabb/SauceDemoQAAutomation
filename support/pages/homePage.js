@@ -16,6 +16,14 @@ class HomePage extends Page {
         return $('//button[@class="btn btn_primary btn_small btn_inventory"]');
     }
     
+    get burgerMenu() {
+        return $('//button[@id="react-burger-menu-btn"]');
+    }
+
+    get aboutCard() {
+        return $('//a[@id="about_sidebar_link"]')
+    }
+     
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
@@ -25,6 +33,13 @@ class HomePage extends Page {
         this.addToCart.click()
     }
 
+    clickBurgerMenuButton() {
+        this.burgerMenu.click()
+    }
+
+    clickAboutCard() {
+        this.aboutCard.click()
+    }
 }
 
 module.exports = new HomePage();
