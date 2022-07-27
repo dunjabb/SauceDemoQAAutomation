@@ -11,7 +11,7 @@ When(/^The user clicks on the product sort button$/, () => {
 });
 
 When(/^The drop down menu appears$/, () => {
-	browser.pause(5000);
+	browser.pause(1000);
 });
 
 When(/^The user clicks on option one from A to Z$/, () => {
@@ -19,5 +19,5 @@ When(/^The user clicks on option one from A to Z$/, () => {
 });
 
 Then(/^All product will be sorted by name from A to Z$/, () => {
-	browser.pause(5000);
+	browser.pause(1000);
 });
