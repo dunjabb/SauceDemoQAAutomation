@@ -13,4 +13,9 @@ You can access this website with this URL: https://www.saucedemo.com/
 Tests are run with the command: npx wdio run ./wdio.conf.js 
 
 Tests that are executed: 
-1. Test for Login page 
+1. Test for Login page
+2. About card test
+3. Add product to cart test
+4. All items card test
+5. Logout test 
+6. Test for product sorter  

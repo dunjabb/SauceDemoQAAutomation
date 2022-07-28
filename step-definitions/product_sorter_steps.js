@@ -1,23 +1,15 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const LoginPage = require('../support/pages/loginPage');
-const HomePage = require('../support/pages/homePage'); 
-
-Given(/^The user is on the Home page of Saucedemo$/, () => {
-	browser.url('https://www.saucedemo.com/inventory.html');
-});
+const HomePage = require('../support/pages/homePage');
 
 When(/^The user clicks on the product sort button$/, () => {
 	HomePage.clickProductSorterButton();
 });
 
-When(/^The drop down menu appears$/, () => {
-	browser.pause(1000);
+When(/^The user clicks on option to sort by price low to high$/, () => {
+	HomePage.clickOptionLowToHigh();
 });
 
-When(/^The user clicks on option one from A to Z$/, () => {
-	HomePage.clickOptionOneAZ();
-});
-
-Then(/^All product will be sorted by name from A to Z$/, () => {
-	browser.pause(1000);
+Then(/^All product will be sorted by price from low to high$/, () => {
+	HomePage.checkIfPriceIsDisplayed();
 });
