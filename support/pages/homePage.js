@@ -48,16 +48,16 @@ class HomePage extends Page {
         return $('//div[@class="inventory_item_name"]')
     }
 
-    get resetSidebar() {
-        return $('//a[@id="reset_sidebar_link"]')
-    }
-
     get itemStatus() {
         return $('//button[@id="remove-sauce-labs-backpack"]')
     }
 
     get facebookIcon() {
         return $('//a[@href="https://www.facebook.com/saucelabs"]')
+    }
+
+    get twitterIcon() {
+        return $('//a[@href="https://twitter.com/saucelabs"]')
     }
 
     checkIfUserIsLogedIn() {
@@ -111,6 +111,10 @@ class HomePage extends Page {
 
     clickFacebookIcon() {
         this.facebookIcon.click()
+    }
+
+    clickTwitterIcon() {
+        this.twitterIcon.click()
     }
 }
 
