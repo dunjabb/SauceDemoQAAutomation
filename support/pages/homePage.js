@@ -56,6 +56,10 @@ class HomePage extends Page {
         return $('//button[@id="remove-sauce-labs-backpack"]')
     }
 
+    get facebookIcon() {
+        return $('//a[@href="https://www.facebook.com/saucelabs"]')
+    }
+
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
@@ -103,6 +107,10 @@ class HomePage extends Page {
 
     clickShoppingCartButton() {
         this.shoppingCart.click()
+    }
+
+    clickFacebookIcon() {
+        this.facebookIcon.click()
     }
 }
 
