@@ -100,6 +100,10 @@ class HomePage extends Page {
     checkIfItemIsInTheShoppingCart() {
         assert.equal(this.itemStatus.getText(), "REMOVE", "Text is not displayed")
     }
+
+    clickShoppingCartButton() {
+        this.shoppingCart.click()
+    }
 }
 
 module.exports = new HomePage();
