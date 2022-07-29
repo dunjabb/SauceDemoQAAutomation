@@ -21,7 +21,7 @@ class CheckoutInfoPage extends Page {
     inputNameLastnameAndPostalCode(name, lastName, postalCode) {
         this.inputName.setValue(name);
         this.inputLastName.setValue(lastName);
-        this.inputPostalCode.setValue(postalCode); 
+        this.inputPostalCode.setValue(postalCode);
     }
 
     clickContinueButton() {

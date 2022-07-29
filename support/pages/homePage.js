@@ -116,6 +116,7 @@ class HomePage extends Page {
     clickTwitterIcon() {
         this.twitterIcon.click()
     }
+
 }
 
 module.exports = new HomePage();
