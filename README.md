@@ -18,4 +18,7 @@ Tests that are executed:
 3. Add product to cart test
 4. All items card test
 5. Logout test 
-6. Test for product sorter  
+6. Test for product sorter 
+7. Checkout process test
+8. Facebook link test
+9. Twitter link test 
