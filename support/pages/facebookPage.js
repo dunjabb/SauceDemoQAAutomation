@@ -8,7 +8,7 @@ class FacebookPage extends Page {
     }
 
     checkIsUserIsOnTheFacebookPage() {
-        assert.equal(this.facebookHeader.getText(), 'Log In', "Log In text is not displayed");
+        assert.equal(this.getText(this.facebookHeader), 'Log In', "Log In text is not displayed");
     }
 }
 module.exports = new FacebookPage();

@@ -18,15 +18,10 @@ class CheckoutInfoPage extends Page {
         return $('//input[@id="continue"]');
     }
 
-    inputNameLastnameAndPostalCode(name, lastName, postalCode) {
-
+    inputNameLastNameAndPostalCode(name, lastName, postalCode) {
         this.setValue(this.inputName, name);
         this.setValue(this.inputLastName, lastName);
         this.setValue(this.inputPostalCode, postalCode); 
-
-        this.inputName.setValue(name);
-        this.inputLastName.setValue(lastName);
-        this.inputPostalCode.setValue(postalCode);
     }
 
     clickContinueButton() {
