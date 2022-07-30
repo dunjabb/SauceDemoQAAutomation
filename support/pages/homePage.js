@@ -66,31 +66,31 @@ class HomePage extends Page {
     }
 
     clickAddToCartButton() {
-        this.addToCart.click()
+        this.click(this.addToCart) 
     }
 
     clickBurgerMenuButton() {
-        this.burgerMenu.click()
+        this.click(this.burgerMenu)
     }
 
     clickAboutCard() {
-        this.aboutCard.click()
+        this.click(this.aboutCard)
     }
 
     clickProductSorterButton() {
-        this.productSorter.click()
+        this.click(this.productSorter)
     }
 
     clickOptionLowToHigh() {
-        this.optionLowToHigh.click()
+        this.click(this.optionLowToHigh)
     }
 
     clickLogoutButton() {
-        this.logout.click()
+        this.click(this.logout)
     }
 
     clickAllItemsButton() {
-        this.allItems.click()
+        this.click(this.allItems)
     }
 
     checkIfAllItemsAreDisplayed() {
@@ -106,7 +106,7 @@ class HomePage extends Page {
     }
 
     clickShoppingCartButton() {
-        this.shoppingCart.click()
+        this.click(this.shoppingCart)
     }
 
     clickFacebookIcon() {

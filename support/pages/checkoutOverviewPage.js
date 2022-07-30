@@ -2,13 +2,13 @@ const Page = require('./basePage');
 const assert = require('assert');
 
 class ChekoutOverviewPage extends Page {
-  
+
     get finishButton() {
         return $('//button[@id="finish"]');
     }
-    
+
     clickFinishButton() {
-        this.finishButton.click();
+        this.click(this.finishButton);
     }
 
     get completeHeader() {

@@ -12,7 +12,7 @@ class ShoppingCartPage extends Page {
     }
 
     clickCheckoutButton() {
-        this.checkoutButton.click()
+        this.click(this.checkoutButton);
     }
 
     checkIfUserIsOnShoppingCartPage() {

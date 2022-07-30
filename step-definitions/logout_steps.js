@@ -12,4 +12,5 @@ When(/^The user click on the Logout button$/, () => {
 
 Then(/^The user will be redirected to the Login page of the Saucedemo$/, () => {
 	browser.url('https://www.saucedemo.com/');
+	LoginPage.checkIfUserIsOnLoginPage();
 });

@@ -1,4 +1,3 @@
-
 const Page = require('./basePage');
 const assert = require('assert');
 
@@ -23,13 +22,18 @@ class LoginPage extends Page {
         * a method to encapsule automation code to interact with the page
         * e.g. to login using username and password
         */
+
     inputUsernameAndPassword(username, password) {
-        this.inputUsername.setValue(username);
-        this.inputPassword.setValue(password);
+        this.setValue(this.inputUsername, username);
+        this.setValue(this.inputPassword, password);
     }
 
     clickLoginButton() {
-        this.btnSubmit.click()
+        this.click(this.btnSubmit);
+    }
+
+    checkIfUserIsOnLoginPage() {
+        assert.equal(this.btnSubmit.isDisplayed(), true, "Login button is not dispalyed");
     }
 }
 
