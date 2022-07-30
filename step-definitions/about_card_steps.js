@@ -1,10 +1,11 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
 const LoginPage = require('../support/pages/loginPage');
 const HomePage = require('../support/pages/homePage');
+const userData = require('../config/data/userData');
 
 Given(/^The user is on the Home page of Saucedemo$/, () => {
 	browser.url("/");
-	LoginPage.inputUsernameAndPassword("standard_user", "secret_sauce");
+	LoginPage.inputUsernameAndPassword(userData.username, userData.password);
 	LoginPage.clickLoginButton();
 	browser.pause(1000)
 	HomePage.checkIfUserIsLogedIn();
