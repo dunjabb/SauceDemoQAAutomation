@@ -16,7 +16,7 @@ class ChekoutOverviewPage extends Page {
     }
 
     checkIfPurchaseIsOver() {
-        assert.equal(this.completeHeader.getText(), "THANK YOU FOR YOUR ORDER", "Text is not displayed");
+        assert.equal(this.getText(this.completeHeader), "THANK YOU FOR YOUR ORDER", "Text is not displayed");
     }
 
 }

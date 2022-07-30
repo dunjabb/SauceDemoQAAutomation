@@ -62,7 +62,7 @@ class HomePage extends Page {
 
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
-        assert.equal(this.productHeader.getText(), "PRODUCTS", "Product text is not displayed")
+        assert.equal(this.getText(this.productHeader), "PRODUCTS", "Product text is not displayed")
     }
 
     clickAddToCartButton() {
@@ -94,15 +94,11 @@ class HomePage extends Page {
     }
 
     checkIfAllItemsAreDisplayed() {
-        assert.equal(this.itemName.getText(), "Sauce Labs Backpack", "Product name is not displayed")
+        assert.equal(this.getText(this.itemName), "Sauce Labs Backpack", "Product name is not displayed")
     }
 
     checkIfPriceIsDisplayed() {
         assert.equal(this.price.isDisplayed(), true, "Price is not displayed")
-    }
-
-    checkIfItemIsInTheShoppingCart() {
-        assert.equal(this.itemStatus.getText(), "REMOVE", "Text is not displayed")
     }
 
     clickShoppingCartButton() {
@@ -110,11 +106,11 @@ class HomePage extends Page {
     }
 
     clickFacebookIcon() {
-        this.facebookIcon.click()
+        this.click(this.facebookIcon)
     }
 
     clickTwitterIcon() {
-        this.twitterIcon.click()
+        this.click(this.twitterIcon)
     }
 
 }
