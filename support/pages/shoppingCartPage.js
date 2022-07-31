@@ -15,6 +15,10 @@ class ShoppingCartPage extends Page {
         return $('//div[@class="cart_quantity"]')
     }
 
+    get continueButton() {
+        return $('//button[@id="continue-shopping"]')
+    }
+
     clickCheckoutButton() {
         this.click(this.checkoutButton);
     }
@@ -25,6 +29,10 @@ class ShoppingCartPage extends Page {
 
     checkIfItemIsInTheShoppingCart() {
         assert.equal(this.getText(this.cartQTY), "1", "Number 1 is not displayed")
+    }
+
+    clickContinueShoppingButton() {
+        this.click(this.continueButton);
     }
 }
 
