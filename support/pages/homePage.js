@@ -155,11 +155,11 @@ class HomePage extends Page {
         console.log(fourthItemPrice);
         console.log(fifthItemPrice);
         console.log(sixthItemPrice);
-        assert.equal(firstItemPrice > secondItemPrice, true, "First is bigger than second");
-        assert.equal(secondItemPrice > thirdItemPrice, true, "Second is bigger than third");
-        assert.equal(thirdItemPrice > fourthItemPrice, false, "Third is equal to fourth");
-        assert.equal(fourthItemPrice > fifthItemPrice, true, "Fourth is bigger than fifth");
-        assert.equal(fifthItemPrice > sixthItemPrice, true, "Fifth is bigger than sixth");
+        assert.equal(firstItemPrice >= secondItemPrice, true, "First is bigger than second");
+        assert.equal(secondItemPrice >= thirdItemPrice, true, "Second is bigger than third");
+        assert.equal(thirdItemPrice >= fourthItemPrice, true, "Third is equal to fourth");
+        assert.equal(+fourthItemPrice >= +fifthItemPrice, true, "Fourth is bigger than fifth");
+        assert.equal(fifthItemPrice >= sixthItemPrice, true, "Fifth is bigger than sixth");
     }
 
 }
