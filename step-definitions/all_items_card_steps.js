@@ -10,5 +10,5 @@ When(/^The user clicks on the All items button$/, () => {
 });
 
 Then(/^All items, product will be displayed$/, () => {
-	HomePage.checkIfAllItemsAreDisplayed();
+	HomePage.checkIfItemsAreDisplayed();
 });

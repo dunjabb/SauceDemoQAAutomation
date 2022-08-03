@@ -19,16 +19,21 @@ class ShoppingCartPage extends Page {
         return $('//button[@id="continue-shopping"]')
     }
 
+    get cartDescription() {
+        return $('//div[@class="cart_desc_label"]'); 
+    }
+
     clickCheckoutButton() {
         this.click(this.checkoutButton);
     }
 
     checkIfUserIsOnShoppingCartPage() {
-        assert.equal(this.getText(this.cartHeader), "YOUR CART", "Cart header is not displayed")
+        assert.equal(this.getText(this.cartHeader), "YOUR CART", "Cart header is not displayed");
     }
 
     checkIfItemIsInTheShoppingCart() {
-        assert.equal(this.getText(this.cartQTY), "1", "Number 1 is not displayed")
+        assert.equal(this.getText(this.cartQTY), "1", "Number 1 is not displayed");
+        assert.equal(this.getText(this.cartDescription), "DESCRIPTION", "Description text is not displayed"); 
     }
 
     clickContinueShoppingButton() {

@@ -17,5 +17,5 @@ When(/^The user click on the Continue Shopping button$/, () => {
 });
 
 Then(/^The user will be returned to the Home page with all products displayed$/, () => {
-    HomePage.checkIfAllItemsAreDisplayed();
+    HomePage.checkIfItemsAreDisplayed();
 });

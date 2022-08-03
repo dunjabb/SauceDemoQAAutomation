@@ -7,6 +7,6 @@ When(/^The user clicks on the Facebook icon$/, () => {
 });
 
 Then(/^The user will be redirected to the Saucelabs page on Facebook$/, () => {
-	browser.url('https://www.facebook.com/saucelabs');
+	browser.switchWindow('https://www.facebook.com/saucelabs');
 	FacebookPage.checkIsUserIsOnTheFacebookPage();
 });

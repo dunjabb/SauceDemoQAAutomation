@@ -21,5 +21,5 @@ When(/^The user clicks on the about button$/, () => {
 });
 
 Then(/^The user will be directed to the Saucelabs website$/, () => {
-	SaucelabsPage.checkIsUserIsOnTheSaucelabsPage();
+	SaucelabsPage.checkIfUserIsOnTheSaucelabsPage();
 });

@@ -18,6 +18,10 @@ class LoginPage extends Page {
         return $('//input[@type = "submit"]');
     }
 
+    get botPicture() {
+        return $('//div[@class="bot_column"]');
+    }
+
     /**
         * a method to encapsule automation code to interact with the page
         * e.g. to login using username and password
@@ -34,6 +38,7 @@ class LoginPage extends Page {
 
     checkIfUserIsOnLoginPage() {
         assert.equal(this.btnSubmit.isDisplayed(), true, "Login button is not dispalyed");
+        assert.equal(this.botPicture.isDisplayed(), true, "Bot picture is not displayed"); 
     }
 }
 

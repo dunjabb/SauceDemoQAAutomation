@@ -28,8 +28,8 @@ class HomePage extends Page {
         return $('//select[@class="product_sort_container"]')
     }
 
-    get optionLowToHigh() {
-        return $('//option[@value="lohi"]')
+    get optionHighToLow() {
+        return $('//option[@value="hilo"]')
     }
 
     get price() {
@@ -60,13 +60,42 @@ class HomePage extends Page {
         return $('//a[@href="https://twitter.com/saucelabs"]')
     }
 
+    get firstItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[1]')
+    }
+
+    get secondItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[2]')
+    }
+
+    get thirdItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[3]')
+    }
+
+    get fourthItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[4]')
+    }
+
+    get fifthItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[5]')
+    }
+
+    get sixthItemPrice() {
+        return $('(//div[@class="inventory_item_price"])[6]')
+    }
+
+    get headerPicture() {
+        return $('//div[@class="peek"]');
+    }
+
     checkIfUserIsLogedIn() {
         assert.equal(this.shoppingCart.isDisplayed(), true, "Shopping cart is not dispalyed");
         assert.equal(this.getText(this.productHeader), "PRODUCTS", "Product text is not displayed")
+        assert.equal(this.headerPicture.isDisplayed(), true, "Header picture is not displayed");
     }
 
     clickAddToCartButton() {
-        this.click(this.addToCart) 
+        this.click(this.addToCart)
     }
 
     clickBurgerMenuButton() {
@@ -81,8 +110,8 @@ class HomePage extends Page {
         this.click(this.productSorter)
     }
 
-    clickOptionLowToHigh() {
-        this.click(this.optionLowToHigh)
+    clickOptionHighToLow() {
+        this.click(this.optionHighToLow)
     }
 
     clickLogoutButton() {
@@ -93,7 +122,7 @@ class HomePage extends Page {
         this.click(this.allItems)
     }
 
-    checkIfAllItemsAreDisplayed() {
+    checkIfItemsAreDisplayed() {
         assert.equal(this.getText(this.itemName), "Sauce Labs Backpack", "Product name is not displayed")
     }
 
@@ -111,6 +140,26 @@ class HomePage extends Page {
 
     clickTwitterIcon() {
         this.click(this.twitterIcon)
+    }
+
+    checkIfItemsAreSortedFromHighToLowPrice() {
+        const firstItemPrice = this.getText(this.firstItemPrice).split('$')[1];
+        const secondItemPrice = this.getText(this.secondItemPrice).split('$')[1];
+        const thirdItemPrice = this.getText(this.thirdItemPrice).split('$')[1];
+        const fourthItemPrice = this.getText(this.fourthItemPrice).split('$')[1];
+        const fifthItemPrice = this.getText(this.fifthItemPrice).split('$')[1];
+        const sixthItemPrice = this.getText(this.sixthItemPrice).split('$')[1];
+        console.log(firstItemPrice);
+        console.log(secondItemPrice);
+        console.log(thirdItemPrice);
+        console.log(fourthItemPrice);
+        console.log(fifthItemPrice);
+        console.log(sixthItemPrice);
+        assert.equal(firstItemPrice > secondItemPrice, true, "First is bigger than second");
+        assert.equal(secondItemPrice > thirdItemPrice, true, "Second is bigger than third");
+        assert.equal(thirdItemPrice > fourthItemPrice, false, "Third is equal to fourth");
+        assert.equal(fourthItemPrice > fifthItemPrice, true, "Fourth is bigger than fifth");
+        assert.equal(fifthItemPrice > sixthItemPrice, true, "Fifth is bigger than sixth");
     }
 
 }

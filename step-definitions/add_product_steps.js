@@ -1,5 +1,4 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const { shoppingCart } = require('../support/pages/homePage');
 const HomePage = require('../support/pages/homePage');
 const ShoppingCartPage = require('../support/pages/shoppingCartPage');
 
