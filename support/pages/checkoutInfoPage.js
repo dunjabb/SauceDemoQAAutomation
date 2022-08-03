@@ -1,4 +1,5 @@
 const Page = require('./basePage');
+const assert = require('assert');
 
 class CheckoutInfoPage extends Page {
 
@@ -18,10 +19,18 @@ class CheckoutInfoPage extends Page {
         return $('//input[@id="continue"]');
     }
 
+    get cartHeader() {
+        return $('//span[@class="title"]');
+    }
+
+    checkIfUserIsOnTheInfoPage() {
+        assert.equal(this.getText(this.cartHeader), 'CHECKOUT: YOUR INFORMATION', "Cart header is not displayed");
+    }
+
     inputNameLastNameAndPostalCode(name, lastName, postalCode) {
         this.setValue(this.inputName, name);
         this.setValue(this.inputLastName, lastName);
-        this.setValue(this.inputPostalCode, postalCode); 
+        this.setValue(this.inputPostalCode, postalCode);
     }
 
     clickContinueButton() {

@@ -16,6 +16,5 @@ When(/^The user clicks on the login button$/, () => {
 });
 
 Then(/^The user will be directed to the Homepage of Saucedemo Swag Labs$/, () => {
-	browser.pause(1000)
 	HomePage.checkIfUserIsLogedIn();
 });

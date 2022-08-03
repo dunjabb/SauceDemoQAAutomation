@@ -5,10 +5,10 @@ When(/^The user clicks on the product sort button$/, () => {
 	HomePage.clickProductSorterButton();
 });
 
-When(/^The user clicks on option to sort by price low to high$/, () => {
-	HomePage.clickOptionLowToHigh();
+When(/^The user clicks on option to sort by price high to low$/, () => {
+	HomePage.clickOptionHighToLow();
 });
 
-Then(/^All product will be sorted by price from low to high$/, () => {
-	HomePage.checkIfPriceIsDisplayed();
+Then(/^All product will be sorted by price from high to low$/, () => {
+	HomePage.checkIfItemsAreSortedFromHighToLowPrice();
 });

@@ -11,7 +11,6 @@ Given(/^The user is on the Shopping cart page and has an item in the cart$/, () 
 	browser.url("/");
 	LoginPage.inputUsernameAndPassword(userData.username, userData.password);
 	LoginPage.clickLoginButton();
-	browser.pause(1000)
 	HomePage.checkIfUserIsLogedIn();
 	HomePage.clickAddToCartButton();
 	HomePage.clickShoppingCartButton(); 
@@ -23,6 +22,7 @@ When(/^The user click on the Checkout button$/, () => {
 });
 
 When(/^The user typs necessary data$/, () => {
+	CheckoutInfoPage.checkIfUserIsOnTheInfoPage(); 
 	CheckoutInfoPage.inputNameLastNameAndPostalCode(userData.name, userData.lastName, userData.postalCode);
 });
 
@@ -31,6 +31,7 @@ When(/^The user click on Continue button$/, () => {
 });
 
 When(/^The user click on Finish button$/, () => {
+	CheckoutOverviewPage.checkIfUserIsOnTheOverviewPage(); 
 	CheckoutOverviewPage.clickFinishButton();
 });
 

@@ -7,6 +7,6 @@ When(/^The user clicks on the Twitter icon$/, () => {
 });
 
 Then(/^The user will be redirected to the Saucelabs account page on Twitter$/, () => {
-    browser.url('https://twitter.com/saucelabs');
+    browser.switchWindow('https://twitter.com/saucelabs');
     TwitterPage.checkIsUserIsOnTheTwitterPage();
 });
